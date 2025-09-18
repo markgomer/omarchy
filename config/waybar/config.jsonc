@@ -113,7 +113,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "on-click": "alacritty --class=Wiremix -e wiremix -v output",
     "on-click-right": "pamixer -t",
     "on-scroll-up": "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | select(.focused == true).name')\" --output-volume raise",
     "on-scroll-down": "swayosd-client --monitor \"$(hyprctl monitors -j | jq -r '.[] | select(.focused == true).name')\" --output-volume lower",
