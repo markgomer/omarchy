@@ -24,20 +24,20 @@ fi
 ln -nsf "$THEME_PATH" "$CURRENT_THEME_DIR"
 
 # Change gnome modes
-# if [[ -f ~/.config/omarchy/current/theme/light.mode ]]; then
-#   gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
-#   gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
-# else
-#   gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-#   gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-# fi
+if [[ -f ~/.config/omarchy/current/theme/light.mode ]]; then
+  gsettings set org.gnome.desktop.interface color-scheme "prefer-light"
+  # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
+else
+  gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+  # gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+fi
 
 # Change gnome icon theme color
-# if [[ -f ~/.config/omarchy/current/theme/icons.theme ]]; then
-#   gsettings set org.gnome.desktop.interface icon-theme "$(<~/.config/omarchy/current/theme/icons.theme)"
-# else
-#   gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
-# fi
+if [[ -f ~/.config/omarchy/current/theme/icons.theme ]]; then
+  gsettings set org.gnome.desktop.interface icon-theme "$(<~/.config/omarchy/current/theme/icons.theme)"
+else
+  gsettings set org.gnome.desktop.interface icon-theme "Yaru-blue"
+fi
 
 # Change Chromium colors
 if command -v chromium &>/dev/null; then
