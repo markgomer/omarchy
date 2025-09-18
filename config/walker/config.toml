@@ -6,6 +6,14 @@ hotreload_theme = true
 force_keyboard_focus = true
 timeout = 60
 
+[keybinds]
+close = "Escape"
+next = "tab"
+previous = "shift tab"
+toggle_exact = "ctrl e"
+resume_last_query = "ctrl r"
+quick_activate = ["F1", "F2", "F3", "F4"]
+
 [keys.ai]
 run_last_response = ["ctrl e"]
 
@@ -69,7 +77,7 @@ hidden = true
 [builtins.emojis]
 name = "Emojis"
 icon = ""
-prefix = ":"
+prefix = "."
 
 [builtins.symbols]
 after_copy = ""
@@ -82,7 +90,7 @@ icon = "file"
 name = "Finder"
 preview_images = true
 hidden = false
-prefix = "."
+prefix = ":"
 
 [builtins.runner]
 shell_config = ""
