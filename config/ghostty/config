@@ -1,6 +1,8 @@
 # Dynamic theme colors
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
+command = "$HOME/dotfiles/.local/bin/poke-zellij.sh"
+
 # Font
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
