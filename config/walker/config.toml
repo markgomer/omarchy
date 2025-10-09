@@ -17,22 +17,8 @@ anchor_right = true
 [placeholders]
 "default" = { input = " Search...", list = "No Results" } # placeholders for input and empty list, key is the providers name, so f.e. "desktopapplications" or "menus:other"
 
-[keybinds]
-close = ["Escape"]
-next = ["Down"]
-previous = ["Up"]
-toggle_exact = ["ctrl e"]
-resume_last_query = ["ctrl r"]
-quick_activate = []
-
-[providers]
-default = [
-  "desktopapplications",
-  "menus",
-  "websearch",
-] # providers to be queried by default
-empty = ["desktopapplications"] # providers to be queried when query is empty
-max_results = 50 # global max results
+[keys.ai]
+run_last_response = ["ctrl e"]
 
 [providers.sets] # define your own defaults/empty sets of providers
 [providers.max_results_provider] # define max results per provider in here
@@ -41,13 +27,73 @@ max_results = 50 # global max results
 prefix = "/"
 provider = "providerlist"
 
-[[providers.prefixes]]
-prefix = "."
-provider = "files"
+[builtins.hyprland_keybinds]
+path = "~/.config/hypr/hyprland.conf"
+hidden = true
 
-[[providers.prefixes]]
+[builtins.applications]
+launch_prefix = "uwsm app -- "
+placeholder = " Search..."
+prioritize_new = false
+context_aware = false
+show_sub_when_single = false
+history = false
+icon = ""
+hidden = true
+
+[builtins.applications.actions]
+enabled = false
+hide_category = true
+
+[builtins.bookmarks]
+hidden = true
+
+[[builtins.bookmarks.entries]]
+label = "Omarchy - Github"
+url = "https://github.com/basecamp/omarchy"
+keywords = ["omarchy", "github"]
+
+[[builtins.bookmarks.entries]]
+label = "Omarchy Manual"
+url = "https://manuals.omamix.org/2/the-omarchy-manual"
+keywords = ["omarchy"]
+
+[builtins.calc]
+name = "Calculator"
+icon = ""
+min_chars = 3
+prefix = "="
+
+[builtins.windows]
+switcher_only = true
+hidden = true
+
+[builtins.clipboard]
+hidden = true
+
+[builtins.commands]
+hidden = true
+
+[builtins.custom_commands]
+hidden = true
+
+[builtins.emojis]
+name = "Emojis"
+icon = ""
 prefix = ":"
-provider = "symbols"
+
+[builtins.symbols]
+after_copy = ""
+hidden = true
+
+[builtins.finder]
+use_fd = true
+cmd_alt = "xdg-open $(dirname ~/%RESULT%)"
+icon = "file"
+name = "Finder"
+preview_images = true
+hidden = false
+prefix = "."
 
 [[providers.prefixes]]
 prefix = "="
