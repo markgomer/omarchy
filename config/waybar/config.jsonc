@@ -67,7 +67,10 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "$TERMINAL -e btop"
+    // "on-click": "$TERMINAL -e btop",
+    "on-click": "pkexec /home/majunior/.local/bin/powersave.sh",
+    "on-click-middle": "pkexec /home/majunior/.local/bin/equilibrado.sh",
+    "on-click-right": "pkexec /home/majunior/.local/bin/performance.sh"
   },
   "clock": {
     "format": "{:L%H:%M - %d/%b}",
