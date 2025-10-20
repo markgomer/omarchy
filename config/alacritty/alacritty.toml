@@ -19,5 +19,5 @@ bindings = [
     { key = "F11", action = "ToggleFullscreen" }
 ]
 
-[terminal.shell]
-program = "/home/majunior/dotfiles/.local/bin/poke-zellij.sh"
+# [terminal.shell]
+# program = "/home/majunior/dotfiles/.local/bin/poke-zellij.sh"
